@@ -1,0 +1,101 @@
+/* Fade blue theme and layout */
+:root {
+  --bg: #e8f2ff;
+  --card: #ffffff;
+  --accent: #1976d2;
+  --accent-fade: #e3f0ff;
+  --text: #222;
+  --fade-blue: linear-gradient(135deg, #e3f0ff 0%, #b3d1f7 100%);
+}
+body {
+  margin: 0;
+  font-family: Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.fade-blue {
+  background: var(--fade-blue);
+}
+.site-header {
+  border-bottom: 1px solid #e6e9ef;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.25rem;
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0 0 .5rem;
+  font-size: 2rem;
+}
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 0;
+  margin-top: 1rem;
+}
+.site-footer {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: .9rem;
+  color: #666;
+}
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+  }
+  .site-nav.open {
+    display: block;
+    background: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    border: 1px solid #e6e9ef;
+    padding: .5rem;
+    border-radius: 6px;
+  }
+  .site-nav ul {
+    flex-direction: column;
+  }
+}
